@@ -10,6 +10,16 @@
  */
 class Dupwiki extends CActiveRecord
 {
+    // иерархия меню
+    public $items = array();
+    private $maxlevel;
+
+    public function __construct($maxlevel)
+    {
+        $this->maxlevel = $maxlevel;
+    }
+
+
 	/**
 	 * @return string the associated database table name
 	 */
@@ -26,13 +36,48 @@ class Dupwiki extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('parent_id, problem', 'required'),
-			array('parent_id', 'numerical', 'integerOnly'=>true),
+			array('parent_id, problem, level, sortnumber', 'required'),
+			array('parent_id, level, sortnumber', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, parent_id, problem', 'safe', 'on'=>'search'),
 		);
 	}
+
+    public function menu_hierarh()
+    {
+        $temp = self::model()->findAll(array(
+            'select'=>'*',
+            'order'=>'level ASC, sortnumber ASC',
+        ));
+
+        foreach ($temp as $ikey => $ival)
+        {
+            $this->items[$ival['parent_id']][] = $ival;
+        }
+
+        //deb::dump($this->items);
+    }
+
+    public function render_tree($parent_id, $level)
+    {
+        if (isset($this->items[$parent_id]))
+        {
+            foreach ($this->items[$parent_id] as $val)
+            {
+                echo "<div style='margin-left:" . ($level * 25) . "px;'>" . $val->problem . "</div>";
+                $level++; //Увеличиваем уровень вложености
+
+                if ($level <= $this->maxlevel)
+                {
+                    //Рекурсивно вызываем этот же метод, но с новым $parent_id и $level
+                    $this->render_tree($val->id, $level);
+                }
+                $level--; //Уменьшаем уровень вложености
+            }
+        }
+    }
+
 
 	/**
 	 * @return array relational rules.

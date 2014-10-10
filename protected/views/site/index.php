@@ -7,7 +7,7 @@ $this->pageTitle=Yii::app()->name;
 
 <div class="form">
 <?php $form=$this->beginWidget('CActiveForm', array(
-        'action' => $this->createUrl('adminka/tree/checkdogovor'),
+        'action' => $this->createUrl('site/checkdogovor'),
         'id'=>'frm_dognumber',
         'enableAjaxValidation'=>true,
         'clientOptions'=>array(

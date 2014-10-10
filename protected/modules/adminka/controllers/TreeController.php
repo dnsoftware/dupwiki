@@ -4,7 +4,10 @@ class TreeController extends Controller
 {
 	public function actionIndex()
 	{
-		$this->render('index');
+        $model = new Dupwiki(2);
+        $model->menu_hierarh();
+
+		$this->render('index', array('model'=>$model));
 	}
 
 	// Uncomment the following methods and override them if needed
@@ -34,32 +37,6 @@ class TreeController extends Controller
 	}
 	*/
 
-    public function actionCheckdogovor()
-    {
-        //$model = new DognumberForm(Yii::app()->params['dupru_login'], Yii::app()->params['dupru_password']);
-        $model = new DognumberForm;
-
-        if(isset($_POST['ajax']) && $_POST['ajax']==='frm_dognumber')
-        {
-            echo CActiveForm::validate($model);
-            Yii::app()->end();
-        }
-
-        if(isset($_POST['DognumberForm']))
-        {
-            // получаем данные от пользователя
-            $model->attributes=$_POST['DognumberForm'];
-            // проверяем полученные данные и, если результат проверки положительный,
-            // перенаправляем пользователя на предыдущую страницу
-            if($model->validate() && $model->checkdogovor(Yii::app()->params['dupru_login'], Yii::app()->params['dupru_password']))
-            {
-                echo "qwqwqwqwqwq";
-                //$this->redirect(Yii::app()->user->returnUrl);
-            }
-        }
-        // рендерим представление
-        //$this->render('login',array('model'=>$model));
-    }
 
 
 

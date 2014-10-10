@@ -18,7 +18,7 @@ class AdminkaModule extends CWebModule
 	{
 		if(parent::beforeControllerAction($controller, $action))
 		{
-            if (Yii::app()->user->checkAccess('dmin'))
+            if (Yii::app()->user->checkAccess('Admin'))
             {
                 return true;
             }

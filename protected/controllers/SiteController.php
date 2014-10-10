@@ -32,6 +32,40 @@ class SiteController extends Controller
 		$this->render('index', array('model'=>$model));
 	}
 
+    public function actionCheckdogovor()
+    {
+        //$model = new DognumberForm(Yii::app()->params['dupru_login'], Yii::app()->params['dupru_password']);
+        $model = new DognumberForm;
+
+        if(isset($_POST['ajax']) && $_POST['ajax']==='frm_dognumber')
+        {
+            echo CActiveForm::validate($model);
+            Yii::app()->end();
+        }
+
+        if(isset($_POST['DognumberForm']))
+        {
+            // получаем данные от пользователя
+            $model->attributes=$_POST['DognumberForm'];
+            // проверяем полученные данные и, если результат проверки положительный,
+            // перенаправляем пользователя на предыдущую страницу
+            if($model->validate())
+            {
+                Yii::app()->session['type_client'] = $model->checkdogovor(Yii::app()->params['dupru_login'], Yii::app()->params['dupru_password']);
+
+                if (Yii::app()->session['type_client'] == DognumberForm::DOGOVOR_NASH_CLIENT)
+                {
+                    $this->redirect($this->createUrl('help/index'));
+                }
+                else
+                {
+                    $this->render('checkdogovor', array('model'=>$model));
+                }
+
+
+            }
+        }
+    }
 
 
 	/**

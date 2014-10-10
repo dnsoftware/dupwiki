@@ -8,7 +8,14 @@
 
 class DognumberForm extends CFormModel
 {
+    const DOGOVOR_NASH_CLIENT = 1;
+    const DOGOVOR_NENASH_CLIENT = 0;
+    const DOGOVOR_RESELLER_CLIENT = 2;
+
+
     public $dogovor_number = '';
+
+    public $resseler_mails = array();
 
     private static $login;
     private static $password;
@@ -40,12 +47,8 @@ class DognumberForm extends CFormModel
         );
 
         $curl = new Curl();
-        //$output = iconv("koi8-r", "windows-1251", $curl->post($url, $data));
         $output = $curl->post($url, $data);
         $cookie = $curl->get_cookies_array();
-        // print_r($cookie);
-
-//        $redir_url = "http://naunet.dup.ru".$curl->response_headers['Location'];
         $redir_url = "http://naunet.dup.ru/n/".$cookie['ZSessionId']."/statp2?any=".$this->dogovor_number;
 
         $curl->close();
@@ -55,12 +58,47 @@ class DognumberForm extends CFormModel
         {
             $curl->setCookie($ckey, $cval);
         }
-        $output = iconv("koi8-r", "windows-1251", $curl->get($redir_url));
+        $output = iconv("koi8-r", "utf-8", $curl->get($redir_url));
+
+        if (preg_match("|<div id='dealerChain'[^>]*>(.+)</div>|siU", $output, $match))
+        {
+
+            $dealerchain = strtolower(strip_tags(trim($match[1])));
+            if ($dealerchain == 'dup.ru' || strip_tags(trim($match[1])) == 'Борис Витальевич Костырко')
+            {
+                return self::DOGOVOR_NASH_CLIENT;
+            }
+            else
+            {
+                $redir_url = "http://naunet.dup.ru/n/".$cookie['ZSessionId']."/notifications?any=".$this->dogovor_number;
+                $output = iconv("koi8-r", "utf-8", $curl->get($redir_url));
+
+                if (preg_match('|name="NEWREGISTRAR_ADM_EMAILS" value="([^\"]+)"|siU', $output, $match))
+                {
+                    $this->resseler_mails[$match[1]] = $match[1];
+                }
+                if (preg_match('|name="NEWEMAIL" value="([^\"]+)"|siU', $output, $match))
+                {
+                    $this->resseler_mails[$match[1]] = $match[1];
+                }
+                if (preg_match('|name="NEWREGISTRAR_TECH_EMAILS" value="([^\"]+)"|siU', $output, $match))
+                {
+                    $this->resseler_mails[$match[1]] = $match[1];
+                }
+
+                return self::DOGOVOR_RESELLER_CLIENT;
+            }
+
+//            deb::dump($this->resseler_mails);
 
 
-        echo $output;
-
-        return true;
+//            die();
+//            echo $output;
+        }
+        else
+        {
+            return self::DOGOVOR_NENASH_CLIENT;
+        }
     }
 
 }

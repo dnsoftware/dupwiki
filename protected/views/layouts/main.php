@@ -39,8 +39,8 @@ header("Content-type: text/html; charset=utf-8");
 				array('label'=>'Contact', 'url'=>array('/site/contact')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Админка', 'url'=>array('/adminka/default/index')),
-				array('label'=>'RBAC', 'url'=>array('/rights'))
+				array('label'=>'Админка', 'url'=>array('/adminka/default/index'), 'visible'=>Yii::app()->user->checkAccess('Admin')),
+				array('label'=>'RBAC', 'url'=>array('/rights'), 'visible'=>Yii::app()->user->checkAccess('Admin'))
 			),
 		)); ?>
 	</div><!-- mainmenu -->
