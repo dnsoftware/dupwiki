@@ -7,6 +7,12 @@ body
 	background: #EFEFEF;
 }
 
+h1
+{
+    font-size: 12px;
+    font-weight: bold;
+}
+
 #page
 {
 	margin-top: 5px;

@@ -38,9 +38,10 @@ class Dupwiki extends CActiveRecord
 		return array(
 			array('parent_id, problem, level, sortnumber', 'required'),
 			array('parent_id, level, sortnumber', 'numerical', 'integerOnly'=>true),
+            array('content', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, parent_id, problem', 'safe', 'on'=>'search'),
+			//array('id, parent_id, problem', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -48,6 +49,7 @@ class Dupwiki extends CActiveRecord
     {
         $temp = self::model()->findAll(array(
             'select'=>'*',
+            'condition'=>'level <= '.$this->maxlevel,
             'order'=>'level ASC, sortnumber ASC',
         ));
 
@@ -63,18 +65,34 @@ class Dupwiki extends CActiveRecord
     {
         if (isset($this->items[$parent_id]))
         {
+            $class = "";
+            if ($level == 1)
+            {
+                $class = " class='topnav'";
+            }
+
+
+            echo "\n<ul".$class.">\n";
             foreach ($this->items[$parent_id] as $val)
             {
-                echo "<div style='margin-left:" . ($level * 25) . "px;'>" . $val->problem . "</div>";
-                $level++; //Увеличиваем уровень вложености
+                //deb::dump($val->id);
+                //die();
+                echo "\n<li>\n";
+                $itemurl = Yii::app()->createUrl('adminka/tree/edititem', array('id'=>$val->id));
 
-                if ($level <= $this->maxlevel)
-                {
-                    //Рекурсивно вызываем этот же метод, но с новым $parent_id и $level
-                    $this->render_tree($val->id, $level);
-                }
-                $level--; //Уменьшаем уровень вложености
+                echo "<a href=\"#\">".$val->problem."</a>";
+                ?><div onclick="get_tree_item('<?= $itemurl;?>', 'div_itemedit');">edit</div><?
+
+
+                //echo CHtml::ajaxLink('edit', $itemurl, array('update'=>'#div_itemedit'));
+
+                $level++; //Увеличиваем уровень вложености
+                //Рекурсивно вызываем этот же метод, но с новым $parent_id и $level
+                $this->render_tree($val->id, $level);
+                $level--; //Уменьшаем уровень вложенности
+                echo "\n</li>\n";
             }
+            echo "\n</ul>\n";
         }
     }
 

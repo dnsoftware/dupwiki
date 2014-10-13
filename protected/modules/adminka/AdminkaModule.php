@@ -12,6 +12,7 @@ class AdminkaModule extends CWebModule
 			'adminka.models.*',
 			'adminka.components.*',
 		));
+
 	}
 
 	public function beforeControllerAction($controller, $action)
