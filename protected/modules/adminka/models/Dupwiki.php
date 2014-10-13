@@ -10,6 +10,8 @@
  */
 class Dupwiki extends CActiveRecord
 {
+//    public $problem;
+
     // иерархия меню
     public $items = array();
     private $maxlevel;
@@ -37,7 +39,8 @@ class Dupwiki extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('parent_id, problem, level, sortnumber', 'required'),
-			array('parent_id, level, sortnumber', 'numerical', 'integerOnly'=>true),
+            //array('problem', 'required'),
+			array('id, parent_id, level, sortnumber', 'numerical', 'integerOnly'=>true),
             array('content', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -61,7 +64,7 @@ class Dupwiki extends CActiveRecord
         //deb::dump($this->items);
     }
 
-    public function render_tree($parent_id, $level)
+    public function render_tree($parent_id, $level, $active_id)
     {
         if (isset($this->items[$parent_id]))
         {
@@ -77,8 +80,14 @@ class Dupwiki extends CActiveRecord
             {
                 //deb::dump($val->id);
                 //die();
-                echo "\n<li>\n";
+                $class = "";
+                if ($val->id == $active_id)
+                {
+                    $class = ' class="active" ';
+                }
+                echo "\n<li ".$class.">\n";
                 $itemurl = Yii::app()->createUrl('adminka/tree/edititem', array('id'=>$val->id));
+
 
                 echo "<a href=\"#\">".$val->problem."</a>";
                 ?><div onclick="get_tree_item('<?= $itemurl;?>', 'div_itemedit');">edit</div><?
@@ -88,7 +97,7 @@ class Dupwiki extends CActiveRecord
 
                 $level++; //Увеличиваем уровень вложености
                 //Рекурсивно вызываем этот же метод, но с новым $parent_id и $level
-                $this->render_tree($val->id, $level);
+                $this->render_tree($val->id, $level, $active_id);
                 $level--; //Уменьшаем уровень вложенности
                 echo "\n</li>\n";
             }

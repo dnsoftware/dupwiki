@@ -31,28 +31,66 @@ class TreeController extends Controller
 
 	public function actionIndex()
 	{
-        $model = new Dupwiki(3);
+/*        $model = new Dupwiki(3);
         $model->menu_hierarh();
-
 		$this->render('index', array('model'=>$model));
+*/
+        $this->render('index');
 	}
 
 
     public function actionEdititem()
     {
-        $model = $this->loadModel();
 
-        $this->renderPartial('edititem', array('model'=>$model));
+        if(isset($_REQUEST['id']))
+        {
+            $model = $this->loadModel($_REQUEST['id']);
+        }
+
+        if(isset($_POST['Dupwiki']))
+        {
+            $model = $this->loadModel($_POST['Dupwiki']['id']);
+
+            if(isset($_POST['ajax']) && $_POST['ajax']==='frm_edititem')
+            {
+                echo CActiveForm::validate($model);
+                Yii::app()->end();
+            }
+
+            $model->attributes=$_POST['Dupwiki'];
+            if($model->save())
+            {
+                $this->renderPartial('edititem', array('model'=>$model), false, true);
+                Yii::app()->end();
+            }
+
+        }
+
+        $this->renderPartial('edititem', array('model'=>$model), false, true);
     }
 
-    public function loadModel()
+    public function actionRendertree()
+    {
+        $id = 0;
+        if(isset($_REQUEST['id']))
+        {
+            $id = $_REQUEST['id'];
+        }
+        $model = new Dupwiki(3);
+
+        $model->menu_hierarh();
+        $this->renderPartial('rendertree', array('model'=>$model, 'id'=>$id), false, true);
+        //Yii::app()->end();
+
+
+    }
+
+    public function loadModel($id)
     {
         if($this->_model===null)
         {
-            if(isset($_REQUEST['id']))
-            {
-                $this->_model=Dupwiki::model()->findByPk($_REQUEST['id']);
-            }
+             $this->_model=Dupwiki::model()->findByPk($id);
+
             if($this->_model===null)
                 throw new CHttpException(404,'Нет такой записи.');
         }
