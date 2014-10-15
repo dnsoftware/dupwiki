@@ -31,20 +31,17 @@ class TreeController extends Controller
 
 	public function actionIndex()
 	{
-/*        $model = new Dupwiki(3);
-        $model->menu_hierarh();
-		$this->render('index', array('model'=>$model));
-*/
         $this->render('index');
 	}
 
 
     public function actionEdititem()
     {
-
         if(isset($_REQUEST['id']))
         {
             $model = $this->loadModel($_REQUEST['id']);
+
+            $this->renderPartial('edititem', array('model'=>$model, 'selector'=>'edititem'), false, true);
         }
 
         if(isset($_POST['Dupwiki']))
@@ -60,13 +57,85 @@ class TreeController extends Controller
             $model->attributes=$_POST['Dupwiki'];
             if($model->save())
             {
-                $this->renderPartial('edititem', array('model'=>$model), false, true);
+                $this->renderPartial('viewitem', array('model'=>$model), false, true);
                 Yii::app()->end();
             }
 
         }
 
-        $this->renderPartial('edititem', array('model'=>$model), false, true);
+    }
+
+    public function actionAdditem()
+    {
+
+        if(isset($_REQUEST['id']))
+        {
+            if ($_REQUEST['id'] > 0)
+            {
+                $parent_item = $this->loadModel($_REQUEST['id']);
+            }
+            else
+            {
+                $parent_item = new Dupwiki();
+                $parent_item->id = 0;
+                $parent_item->level = 1;
+                $parent_item->sortnumber = 10;
+            }
+
+            $model = new Dupwiki();
+            $model->maxlevel = 30;
+            $model->parent_item = $parent_item;
+
+            $this->renderPartial('additem', array('model'=>$model, 'selector'=>'additem'), false, true);
+            Yii::app()->end();
+
+
+        }
+
+        if(isset($_POST['Dupwiki']))
+        {
+            $model=new Dupwiki;
+
+            $model->attributes=$_POST['Dupwiki'];
+            if ($_POST['Dupwiki']['parent_id'] > 0)
+            {
+                $parent_item = $this->loadModel(intval($_POST['Dupwiki']['parent_id']));
+                $model->level = $parent_item->level + 1;
+                $model->sortnumber = $parent_item->sortnumber + 10;
+            }
+            else
+            {
+                $model->level = 1;
+                $model->sortnumber = 10;
+            }
+
+            if(isset($_POST['ajax']) && $_POST['ajax']==='frm_edititem')
+            {
+                echo CActiveForm::validate($model);
+                Yii::app()->end();
+            }
+
+            if($model->save())
+            {
+                $this->renderPartial('viewitem', array('model'=>$model), false, true);
+                Yii::app()->end();
+            }
+
+        }
+
+    }
+
+    public function actionViewitem()
+    {
+        if(isset($_REQUEST['id']))
+        {
+            $model = $this->loadModel($_REQUEST['id']);
+            $model->maxlevel = 30;
+
+            $this->renderPartial('viewitem', array('model'=>$model), false, true);
+            Yii::app()->end();
+
+        }
     }
 
     public function actionRendertree()
@@ -76,7 +145,8 @@ class TreeController extends Controller
         {
             $id = $_REQUEST['id'];
         }
-        $model = new Dupwiki(3);
+        $model = new Dupwiki();
+        $model->maxlevel = 30;
 
         $model->menu_hierarh();
         $this->renderPartial('rendertree', array('model'=>$model, 'id'=>$id), false, true);

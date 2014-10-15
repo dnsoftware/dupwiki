@@ -14,13 +14,15 @@ class Dupwiki extends CActiveRecord
 
     // иерархия меню
     public $items = array();
-    private $maxlevel;
+    public $maxlevel;
+    public $parent_item = null;
 
-    public function __construct($maxlevel)
+/*    public function __construct($maxlevel)
     {
         $this->maxlevel = $maxlevel;
+        parent::__construct();
     }
-
+*/
 
 	/**
 	 * @return string the associated database table name
@@ -87,10 +89,12 @@ class Dupwiki extends CActiveRecord
                 }
                 echo "\n<li ".$class.">\n";
                 $itemurl = Yii::app()->createUrl('adminka/tree/edititem', array('id'=>$val->id));
+                $itemaddurl = Yii::app()->createUrl('adminka/tree/additem', array('id'=>$val->id));
 
 
                 echo "<a href=\"#\">".$val->problem."</a>";
-                ?><div onclick="get_tree_item('<?= $itemurl;?>', 'div_itemedit');">edit</div><?
+                ?><div onclick="get_tree_item('<?= $itemurl;?>', 'div_itemedit');">edit</div>
+                  <div onclick="get_tree_item('<?= $itemaddurl;?>', 'div_itemedit');">add</div><?
 
 
                 //echo CHtml::ajaxLink('edit', $itemurl, array('update'=>'#div_itemedit'));

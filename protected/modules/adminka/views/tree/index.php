@@ -14,6 +14,9 @@ $this->breadcrumbs=array(
 <table style="" border="1">
 <tr>
     <td style="vertical-align: top;">
+
+    <div style="font-weight: bold; margin-bottom: 10px; cursor:pointer;" onclick="get_tree_item('<?= Yii::app()->createUrl('adminka/tree/additem', array('id'=>0));?>', 'div_itemedit')">add</div>
+
     <div id="div_helptree"></div>
     <?
     //$model->render_tree(0, 1, 5);

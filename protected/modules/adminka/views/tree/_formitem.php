@@ -4,7 +4,7 @@
     <?php $form=$this->beginWidget('CActiveForm', array(
         'id'=>'frm_edititem',
         'enableAjaxValidation'=>true,
-        'action'=>$this->createUrl('/adminka/tree/edititem'),
+        'action'=>$this->createUrl('/adminka/tree/'.$selector),
         'clientOptions'=>array(
             'validateOnSubmit'=>true,
             //'validationUrl' => Yii::app()->createUrl("/adminka/tree/edititem" ),
@@ -28,10 +28,22 @@
 
     <p class="note">Fields with <span class="required">*</span> are required.</p>
 
-    <?php echo CHtml::errorSummary($model); ?>
+    <?php
+        $temp = $form->errorSummary($model);
+        echo $temp;
+    ?>
 
     <div class="row">
-        <?php echo $form->hiddenField($model,'id'); ?>
+        <?php
+        if ($model->parent_item == null)
+        {
+            echo $form->hiddenField($model,'id');
+        }
+        else
+        {
+            echo CHtml::hiddenField('Dupwiki[parent_id]', $model->parent_item->id);
+        }
+        ?>
     </div>
 
     <div class="row">
@@ -59,5 +71,6 @@
     </div>
 
     <?php $this->endWidget(); ?>
+
 
 </div><!-- form -->

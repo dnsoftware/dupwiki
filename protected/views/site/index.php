@@ -16,7 +16,10 @@ $this->pageTitle=Yii::app()->name;
 
         )); ?>
 
-    <?php echo $form->errorSummary($model); ?>
+    <?php
+        $temp = $form->errorSummary($model);
+        echo $temp;
+    ?>
 
     <div class="row">
         <?php echo $form->label($model,'dogovor_number'); ?>
