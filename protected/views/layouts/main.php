@@ -55,9 +55,13 @@ header("Content-type: text/html; charset=utf-8");
 	<div class="clear"></div>
 
 	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
-		All Rights Reserved.<br/>
-		<?php echo Yii::powered(); ?>
+        Не нашли ответ на свой вопрос?<br/>
+        <?
+        $c = new Htmlcrypt('support@dup.ru', 8);
+        $c->addMailTo();
+        ?>
+        Напишите нам на <? $c->output();?><br/>
+        © DUP.RU 2008-<?= date("Y");?>
 	</div><!-- footer -->
 
 </div><!-- page -->

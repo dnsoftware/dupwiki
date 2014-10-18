@@ -48,8 +48,25 @@ class DognumberForm extends CFormModel
 
         $curl = new Curl();
         $output = $curl->post($url, $data);
+
         $cookie = $curl->get_cookies_array();
-        $redir_url = "http://naunet.dup.ru/n/".$cookie['ZSessionId']."/statp2?any=".$this->dogovor_number;
+//        $redir_url = "http://naunet.dup.ru/n/".$cookie['ZSessionId']."/statp2?any=".$this->dogovor_number;
+        $redir_url = "http://naunet.dup.ru/n/".$cookie['ZSessionId']."/?any=".$this->dogovor_number;
+//echo $redir_url;
+//die();
+
+        $curl->close();
+
+        $curl = new Curl();
+        foreach ($cookie as $ckey => $cval)
+        {
+            $curl->setCookie($ckey, $cval);
+        }
+        $output = iconv("koi8-r", "utf-8", $curl->get($redir_url));
+
+        preg_match('|any=(\d+?)|siU', $output, $matchnum);
+        $login_dognumber = $matchnum[1];
+        $redir_url = "http://naunet.dup.ru/n/".$cookie['ZSessionId']."/statp2?any=".$login_dognumber;
 
         $curl->close();
 
@@ -70,7 +87,10 @@ class DognumberForm extends CFormModel
             }
             else
             {
-                $redir_url = "http://naunet.dup.ru/n/".$cookie['ZSessionId']."/notifications?any=".$this->dogovor_number;
+                preg_match('|<a href="(.+)"|siU', $match[1], $matchurl);
+
+                //$redir_url = "http://naunet.dup.ru/n/".$cookie['ZSessionId']."/notifications?any=".$this->dogovor_number;
+                $redir_url = str_replace("?any", "notifications?any", "http://naunet.dup.ru/".$matchurl[1]);
                 $output = iconv("koi8-r", "utf-8", $curl->get($redir_url));
 
                 if (preg_match('|name="NEWREGISTRAR_ADM_EMAILS" value="([^\"]+)"|siU', $output, $match))
@@ -97,7 +117,59 @@ class DognumberForm extends CFormModel
         }
         else
         {
-            return self::DOGOVOR_NENASH_CLIENT;
+            $url = 'http://reg.dup.ru/admin/login.php';
+            $data = array(
+                'login' => Yii::app()->params['regru_email'],
+                'passwd' => Yii::app()->params['regru_password'],
+                'email' => Yii::app()->params['regru_email'],
+                'ret' => '/admin/',
+            );
+            $curl = new Curl();
+            $output = $curl->post($url, $data);
+//echo $output."dd";
+//die();
+            $cookie = $curl->get_cookies_array();
+
+            $curl->close();
+
+            $curl = new Curl();
+            foreach ($cookie as $ckey => $cval)
+            {
+                $curl->setCookie($ckey, $cval);
+            }
+            //echo $curl->get('http://reg.dup.ru/admin/');
+            $output = iconv("windows-1251", "utf-8", $curl->get('http://reg.dup.ru/admin/'));
+
+//            echo $output;
+//            deb::dump($cookie);
+//            die();
+
+            $curl->close();
+            $url = 'http://reg.dup.ru/admin/users/';
+            $data = array(
+                'user_name_filter' => $this->dogovor_number,
+                'search_user' => 'Борис',
+                'find_user' => '1',
+            );
+            $curl = new Curl();
+            $curl->setCookie('admin_index_per_page', 25);
+            $curl->setCookie('admin_index_filter', 'd_reg:DESC');
+            $curl->setCookie('PHPSESSID', $cookie['PHPSESSID']);
+
+            $output = iconv("windows-1251", "utf-8", $curl->post($url, $data));
+            $curl->close();
+
+            preg_match('|Пользователей: (\d+)</h1>|siU', $output, $matchkol);
+
+            if (isset($matchkol[1]) && intval($matchkol[1]) > 0)
+            {
+                return self::DOGOVOR_NASH_CLIENT;
+            }
+            else
+            {
+                return self::DOGOVOR_NENASH_CLIENT;
+            }
+
         }
     }
 

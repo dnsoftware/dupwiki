@@ -21,16 +21,19 @@ class SiteController extends Controller
 		);
 	}
 
-	/**
-	 * This is the default 'index' action that is invoked
-	 * when an action is not explicitly requested by users.
-	 */
-	public function actionIndex()
+    public function actionIndex()
+    {
+        $this->render('index');
+    }
+
+	public function actionDognumber()
 	{
         $model = new DognumberForm;
 
-		$this->render('index', array('model'=>$model));
+		$this->render('dognumber', array('model'=>$model));
 	}
+
+
 
     public function actionCheckdogovor()
     {

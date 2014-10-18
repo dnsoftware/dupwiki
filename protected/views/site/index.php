@@ -4,34 +4,33 @@
 $this->pageTitle=Yii::app()->name;
 ?>
 
+<style>
+    .round6
+    {
+        border-radius:6px;
+        -webkit-border-radius:6px;
+        -moz-border-radius:6px;
+        -khtml-border-radius:6px;
+    }
 
-<div class="form">
-<?php $form=$this->beginWidget('CActiveForm', array(
-        'action' => $this->createUrl('site/checkdogovor'),
-        'id'=>'frm_dognumber',
-        'enableAjaxValidation'=>true,
-        'clientOptions'=>array(
-            'validateOnSubmit'=>true,
-        )
+    .clientblock
+    {
+        width: 200px;
+        height: 200px;
+    }
+</style>
 
-        )); ?>
+<div style="height: 400px; width: 100%; border: #000 solid 0px;">
 
-    <?php
-        $temp = $form->errorSummary($model);
-        echo $temp;
-    ?>
+<div style="width:500px; height: 100px; margin:60px auto 10px; border: #000 solid 0px;"">
 
-    <div class="row">
-        <?php echo $form->label($model,'dogovor_number'); ?>
-        <?php echo $form->textField($model,'dogovor_number') ?>
-        <?php echo $form->error($model,'dogovor_number'); ?>
+    <div class="round6 clientblock" style="display: table; float: left; background-color: #ff9966;">
+        <a style="display: table-cell; vertical-align: middle; text-align: center; font-size: 16px" href="<?= $this->createUrl('site/dognumber');?>">Вы - наш клиент!</a>
     </div>
 
-
-    <div class="row submit">
-        <?php echo CHtml::submitButton('Войти'); ?>
+    <div class="round6 clientblock" style="display: table; float: right; background-color: #ccff99">
+        <a style="display: table-cell; vertical-align: middle; text-align: center; font-size: 16px" href="<?= $this->createUrl('help/index');?>">Вы - пока еще не наш клиент!</a>
     </div>
-
-<?php $this->endWidget(); ?>
+</div>
 
 </div>

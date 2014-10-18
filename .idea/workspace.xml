@@ -26,7 +26,7 @@
       <file leaf-file-name="AdminController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/modules/user/controllers/AdminController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="42" selection-start="708" selection-end="708" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="3264">
+            <state line="28" column="42" selection-start="708" selection-end="708" vertical-scroll-proportion="-12.423077" vertical-offset="153" max-vertical-offset="3264">
               <folding />
             </state>
           </provider>
@@ -35,79 +35,16 @@
       <file leaf-file-name="UserModule.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/modules/user/UserModule.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="207" column="25" selection-start="4604" selection-end="4604" vertical-scroll-proportion="0.0" vertical-offset="3519" max-vertical-offset="4590">
+            <state line="207" column="25" selection-start="4604" selection-end="4604" vertical-scroll-proportion="-0.65384614" vertical-offset="3383" max-vertical-offset="4471">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="YiiBase.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yii/framework/YiiBase.php">
+      <file leaf-file-name="Htmlcrypt.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/protected/components/Htmlcrypt.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="133" column="0" selection-start="4774" selection-end="4774" vertical-scroll-proportion="0.0" vertical-offset="2006" max-vertical-offset="14892">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/rights/components/RController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="29" selection-start="1095" selection-end="1095" vertical-scroll-proportion="0.0" vertical-offset="273" max-vertical-offset="1190">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AssignmentController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/rights/controllers/AssignmentController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="5" selection-start="648" selection-end="648" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="3026">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RightsFilter.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/rights/components/RightsFilter.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0" vertical-offset="752" max-vertical-offset="1411">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RWebUser.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/rights/components/RWebUser.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="31" selection-start="1580" selection-end="1591" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1547">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RightsModule.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/rights/RightsModule.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="209" column="49" selection-start="5446" selection-end="5446" vertical-scroll-proportion="0.0" vertical-offset="3230" max-vertical-offset="4080">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserController.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/protected/modules/user/controllers/UserController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="35" selection-start="180" selection-end="180" vertical-scroll-proportion="0.12208258" vertical-offset="102" max-vertical-offset="1819">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Rights.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/protected/modules/rights/components/Rights.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="241" column="36" selection-start="7833" selection-end="7833" vertical-scroll-proportion="0.0" vertical-offset="4097" max-vertical-offset="5304">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3995">
               <folding />
             </state>
           </provider>
@@ -191,281 +128,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="moda.dn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moda.dn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moda.dn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yii" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moda.dn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moda.dn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yii" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="framework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moda.dn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moda.dn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yii" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="framework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gii" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moda.dn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moda.dn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yii" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="framework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="base" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moda.dn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moda.dn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moda.dn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moda.dn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moda.dn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moda.dn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moda.dn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moda.dn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moda.dn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moda.dn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rights" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moda.dn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moda.dn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rights" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moda.dn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moda.dn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rights" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moda.dn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moda.dn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moda.dn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="moda.dn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
+              <option name="myItemId" value="support2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -480,7 +143,7 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../dup.dn" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="FullScreen" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
@@ -532,14 +195,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="748" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924962" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26283988" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1925982" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3984127" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -576,11 +239,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="0" selection-start="2313" selection-end="2313" vertical-scroll-proportion="0.0" vertical-offset="1530" max-vertical-offset="1785" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/components/UserIdentity.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="29" selection-start="686" selection-end="686" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="731" />
@@ -751,9 +409,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/yii/framework/web/auth/CDbAuthManager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="55" selection-start="4085" selection-end="4085" vertical-scroll-proportion="-4.076923" vertical-offset="1458" max-vertical-offset="10268">
-          <folding />
-        </state>
+        <state line="99" column="55" selection-start="4085" selection-end="4085" vertical-scroll-proportion="-4.076923" vertical-offset="1458" max-vertical-offset="10268" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/rights/components/RAuthorizer.php">
@@ -794,23 +450,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/yii/framework/web/auth/CWebUser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="797" column="26" selection-start="26786" selection-end="26786" vertical-scroll-proportion="-6.5384617" vertical-offset="13260" max-vertical-offset="14076">
-          <folding />
-        </state>
+        <state line="797" column="26" selection-start="26786" selection-end="26786" vertical-scroll-proportion="-6.5384617" vertical-offset="13260" max-vertical-offset="14076" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/rights/components/RDbAuthManager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="35" selection-start="207" selection-end="207" vertical-scroll-proportion="2.6153846" vertical-offset="204" max-vertical-offset="5219">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/rights/components/RWebUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="31" selection-start="1580" selection-end="1591" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1547">
-          <folding />
-        </state>
+        <state line="8" column="35" selection-start="207" selection-end="207" vertical-scroll-proportion="2.6153846" vertical-offset="204" max-vertical-offset="5219" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/yii/framework/YiiBase.php">
@@ -822,14 +467,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/user/controllers/AdminController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="42" selection-start="708" selection-end="708" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="3264">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/rights/controllers/AssignmentController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="5" selection-start="648" selection-end="648" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="3026">
+        <state line="28" column="42" selection-start="708" selection-end="708" vertical-scroll-proportion="-12.423077" vertical-offset="153" max-vertical-offset="3264">
           <folding />
         </state>
       </provider>
@@ -841,37 +479,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/rights/components/RightsFilter.php">
+    <entry file="file://$PROJECT_DIR$/protected/modules/user/controllers/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0" vertical-offset="752" max-vertical-offset="1411">
+        <state line="15" column="20" selection-start="278" selection-end="278" vertical-scroll-proportion="0.27468583" vertical-offset="102" max-vertical-offset="1819">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/rights/RightsModule.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="209" column="49" selection-start="5446" selection-end="5446" vertical-scroll-proportion="0.0" vertical-offset="3230" max-vertical-offset="4080">
+        <state line="209" column="49" selection-start="5446" selection-end="5446" vertical-scroll-proportion="0.5798923" vertical-offset="3230" max-vertical-offset="4080">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/rights/components/RWebUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="31" selection-start="1580" selection-end="1591" vertical-scroll-proportion="0.54937166" vertical-offset="357" max-vertical-offset="1547">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/rights/controllers/AssignmentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="5" selection-start="648" selection-end="648" vertical-scroll-proportion="0.64705884" vertical-offset="204" max-vertical-offset="3026">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/modules/rights/components/RightsFilter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="40" selection-start="274" selection-end="274" vertical-scroll-proportion="0.38235295" vertical-offset="0" max-vertical-offset="1411">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/rights/components/Rights.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="241" column="36" selection-start="7833" selection-end="7833" vertical-scroll-proportion="0.0" vertical-offset="4097" max-vertical-offset="5304">
+        <state line="241" column="36" selection-start="7833" selection-end="7833" vertical-scroll-proportion="0.029411765" vertical-offset="4080" max-vertical-offset="5321">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/modules/user/UserModule.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="207" column="25" selection-start="4604" selection-end="4604" vertical-scroll-proportion="0.0" vertical-offset="3519" max-vertical-offset="4590">
+        <state line="207" column="25" selection-start="4604" selection-end="4604" vertical-scroll-proportion="-0.65384614" vertical-offset="3383" max-vertical-offset="4471">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/modules/user/controllers/UserController.php">
+    <entry file="file://$PROJECT_DIR$/protected/components/Htmlcrypt.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="35" selection-start="180" selection-end="180" vertical-scroll-proportion="0.12208258" vertical-offset="102" max-vertical-offset="1819">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3995">
           <folding />
         </state>
       </provider>
